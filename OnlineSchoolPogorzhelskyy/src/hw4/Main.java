@@ -8,6 +8,8 @@ public class Main {
         Lection lection1 = new Lection(1);
         Lection lection2 = new Lection(2);
         Lection lection3 = new Lection(3);
+        Lection lection4 = new Lection(4);
+        Lection lection5 = new Lection(5);
         System.out.println("Total created " + Lection.counter + " lection(s)");
     }
 }
