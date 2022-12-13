@@ -11,5 +11,7 @@ public class Main {
         Lection lection4 = new Lection(4);
         Lection lection5 = new Lection(5);
         System.out.println("Total created " + Lection.counter + " lection(s)");
+
+        // this comment just for homework 5, pull request
     }
 }
