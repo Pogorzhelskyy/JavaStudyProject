@@ -1,10 +1,10 @@
-package models;
+package hw4.models;
 
-public class Course {
+public class Teacher {
     private int id;
     public static int counter;
 
-    public Course (int id) {
+    public Teacher (int id) {
         this.id = id;
         counter ++;
     }

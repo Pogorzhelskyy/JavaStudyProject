@@ -1,4 +1,6 @@
-import models.Lection;
+package hw4;
+
+import hw4.models.Lection;
 
 public class Main {
     public static void main(String[] args) {

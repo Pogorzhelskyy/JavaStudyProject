@@ -1,4 +1,4 @@
-package models;
+package hw4.models;
 
 public class Lection {
     private int id;
