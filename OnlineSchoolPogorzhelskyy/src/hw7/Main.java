@@ -1,16 +1,20 @@
-package hw4;
+package hw7;
 
-import hw4.models.Lection;
-import hw4.models.Course;
+import hw7.models.Course;
+import hw7.models.Lection;
+import hw7.servises.LectionServ;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         char selector = ' ';
-        System.out.println("New Online School");
+        int lectionCounter = 0;
+        Scanner scanner = new Scanner(System.in);
         Course course1 = new Course(1);
-        /*Lection [] lection = new Lection[20];
+        System.out.println("New Online School");
+
+        Lection[] lection = new Lection[20];
         do {
             System.out.println("Please select object to create");
             System.out.println("(c)ourse");
@@ -18,27 +22,19 @@ public class Main {
             System.out.println("(s)tudent");
             System.out.println("(t)eacher");
             System.out.println("(e)xit");
-            Scanner scaner = new Scanner(System.in);
-            selector = scaner.next().charAt(0);
+            selector = scanner.next().charAt(0);
             switch (selector) {
                 case 'c':
                     break;
                 case 'l':
-                    Lection lection[lection.counter] = new Lection(2);
+                    lection[lectionCounter++] = LectionServ.create();
+                    System.out.println("Total created " + Lection.counter + " lection(s)");
                     break;
                 case 's':
                     break;
                 case 't':
                     break;
             }
-        } while (selector != 'e');*/
-
-        /*Lection lection1 = new Lection(1);
-        Lection lection2 = new Lection(2);
-        Lection lection3 = new Lection(3);
-        Lection lection4 = new Lection(4);
-        Lection lection5 = new Lection(5); */
-
-        System.out.println("Total created " + Lection.counter + " lection(s)");
+        } while (selector != 'e');
     }
 }
