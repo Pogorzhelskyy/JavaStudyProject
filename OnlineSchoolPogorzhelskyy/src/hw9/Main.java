@@ -1,8 +1,8 @@
-package hw8;
+package hw9;
 
-import hw8.models.Course;
-import hw8.models.Lection;
-import hw8.servises.LectionServ;
+import hw9.models.Course;
+import hw9.models.Lection;
+import hw9.servises.LectionServ;
 
 import java.util.Scanner;
 
@@ -12,6 +12,7 @@ public class Main {
         //int lectionCounter = 0;
         Scanner scanner = new Scanner(System.in);
         Course course1 = new Course(1);
+        LectionServ.initialCreate(1);
         System.out.println("New Online School");
 
         Lection[] lection = new Lection[20];
@@ -27,7 +28,10 @@ public class Main {
                 case 'c':
                     break;
                 case 'l':
-                    lection[Lection.counter] = LectionServ.create();
+                    System.out.println("New lection(s) creation");
+                    System.out.println("Please enter the course ID");
+                    int courseId = scanner.nextInt();
+                    LectionServ.create(courseId);
                     System.out.println("Total created " + Lection.counter + " lection(s)");
                     if (Lection.counter >= 8) {
                         System.out.println("Program terminated because of 8 lections created");
