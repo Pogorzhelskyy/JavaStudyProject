@@ -16,14 +16,19 @@ public class LectionServ {
             LectionReposit.sizeCheck();
             LectionReposit.lection[Lection.counter] = new Lection(lectionId, courseId);
         }
-        // return new Lection(lectionId, courseId);
-
-
     }
 
     public static void initialCreate(int courseId) {
         for (int i = 0; i < 3; i++) {
             LectionReposit.lection[i] = new Lection(i, 1);
+        }
+    }
+
+    public static void list() {
+        System.out.println("LectionID   CourseID");
+        for (int i = 0; i < Lection.counter; i++) {
+            System.out.println(LectionReposit.lection[i].getId() +
+                    "           " + LectionReposit.lection[i].courseId);
         }
     }
 }

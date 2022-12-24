@@ -22,6 +22,7 @@ public class Main {
             System.out.println("(l)ection");
             System.out.println("(s)tudent");
             System.out.println("(t)eacher");
+            System.out.println("(p)rint all lections");
             System.out.println("(e)xit");
             selector = scanner.next().charAt(0);
             switch (selector) {
@@ -41,6 +42,9 @@ public class Main {
                 case 's':
                     break;
                 case 't':
+                    break;
+                case 'p':
+                    LectionServ.list();
                     break;
                 case 'e':
                     System.out.println("Program terminated user reason");
