@@ -1,6 +1,7 @@
 package hw9;
 
 import hw9.models.Course;
+import hw9.models.CourseReposit;
 import hw9.models.Lection;
 import hw9.servises.LectionServ;
 
@@ -9,13 +10,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         char selector = ' ';
-        //int lectionCounter = 0;
         Scanner scanner = new Scanner(System.in);
-        Course course1 = new Course(1);
+        CourseReposit.course[0] = new Course(10);
         LectionServ.initialCreate(1);
         System.out.println("New Online School");
 
-        Lection[] lection = new Lection[20];
         do {
             System.out.println("Please select object to create");
             System.out.println("(c)ourse");
@@ -37,6 +36,9 @@ public class Main {
                     if (Lection.counter >= 8) {
                         System.out.println("Program terminated because of 8 lections created");
                         System.exit(0);
+                        // module have no sense, for study only
+                        // will be deleted
+                        // this reason no replaced to create method
                     }
                     break;
                 case 's':
