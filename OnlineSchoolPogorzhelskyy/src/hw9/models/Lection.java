@@ -1,4 +1,4 @@
-package hw8.models;
+package hw9.models;
 
 public class Lection {
     private int id;
@@ -19,4 +19,5 @@ public class Lection {
         this.id = id;
         counter++;
     }
+
 }
