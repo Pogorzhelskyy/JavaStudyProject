@@ -1,7 +1,7 @@
-package hw10;
+package hw11;
 
-import hw10.models.*;
-import hw10.servises.LectionServ;
+import hw11.models.*;
+import hw11.servises.LectionServ;
 
 import java.util.Scanner;
 
@@ -9,12 +9,11 @@ public class Main {
     public static void main(String[] args) {
         char selector = ' ';
         Scanner scanner = new Scanner(System.in);
-        //CourseReposit.course[0] = new Course(10);
+        PersonReposit.add(new Person(0, Role.TEACHER, 0 ));
         LectionServ.initialCreate(1);
-        CourseReposit.model[0] = new Course( 1);
         System.out.println("New Online School");
-       // LectionReposit.list();
-        CourseReposit.list();
+        System.out.println(LectionReposit.getById(1));  // print selected
+        LectionReposit.list();  // print all
 
         do {
             System.out.println("Please select object to create");
