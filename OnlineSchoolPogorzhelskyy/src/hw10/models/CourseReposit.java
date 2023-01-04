@@ -1,5 +1,5 @@
 package hw10.models;
 
-public class CourseReposit {
-    public static Course[] course = new Course[10];
+public class CourseReposit extends Repository{
+    // public static Course[] course = new Course[10];
 }
