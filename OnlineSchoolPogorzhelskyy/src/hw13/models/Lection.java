@@ -16,7 +16,7 @@ public class Lection extends Model {
         /* setCounter(getCounter()+1); */
     }
 
-    public Lection(int id, int courseId, int personId) {  //JUST FOR HW11
+    public Lection(int id, int courseId, int personId) {
         setId(id);
         this.courseId = courseId;
         counter++;

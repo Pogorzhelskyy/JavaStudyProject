@@ -19,6 +19,6 @@ public class Teacher extends Model {
 
     @Override
     public String toString() {
-        return "Student ID " + getId();
+        return "Teacher ID " + getId();
     }
 }

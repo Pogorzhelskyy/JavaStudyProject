@@ -64,14 +64,20 @@ public class Repo<E extends Model> {
 
     public void deleteById(int id) {
         int j = 0;
+        int aimIndex = 0;
+        int lastIndex = 0;
         for (E i : entity) {
             if (i != null && i.getId() == id) {
-                entity[j] = entity[E.getCounter()];
+                aimIndex = j;
+                /*entity[j] = entity[E.getCounter()];
                 entity[E.getCounter()] = null;
                 E.setCounter(E.getCounter() - 1);
-                return;
+                return; */
             }
+            if (i != null) lastIndex = j;
             j++;
         }
+        entity[aimIndex] = entity[lastIndex];
+        entity[lastIndex] = null;
     }
 }

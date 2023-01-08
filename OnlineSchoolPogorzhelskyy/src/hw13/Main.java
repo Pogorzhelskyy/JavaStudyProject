@@ -60,7 +60,7 @@ public class Main {
                 case 't':
                     break;
                 case 'p':
-                    System.out.println(LectionServ.getLectionRepo().getAll());
+                    LectionServ.getLectionRepo().list();
                     System.out.println("Counter" + Lection.getCounter());
                     break;
                 case 'd':

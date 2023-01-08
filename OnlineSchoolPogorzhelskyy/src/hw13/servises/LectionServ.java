@@ -1,7 +1,6 @@
 package hw13.servises;
 
 import hw13.models.Lection;
-import hw13.models.LectionReposit;
 import hw13.models.Repo;
 
 import java.util.Scanner;
@@ -25,7 +24,7 @@ public class LectionServ {
     public static void initialCreate(int courseId) {
         lectionRepo = new Repo<>(new Lection[5]);
         for (int i = 0; i < 3; i++) {
-            lectionRepo.add(new Lection(i, courseId, 0));
+            lectionRepo.add(new Lection(i, courseId, 1));
         }
     }
 
