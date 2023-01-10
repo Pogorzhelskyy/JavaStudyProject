@@ -1,7 +1,7 @@
-package hw13.servises;
+package hw14.servises;
 
-import hw13.models.models.Course;
-import hw13.models.models.Repo;
+import hw14.models.Course;
+import hw14.models.Repo;
 
 public class CouseServ {
     private static Repo<Course> courseRepo;

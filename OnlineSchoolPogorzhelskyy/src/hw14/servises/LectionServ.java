@@ -1,7 +1,7 @@
-package hw13.servises;
+package hw14.servises;
 
-import hw13.models.models.Lection;
-import hw13.models.models.Repo;
+import hw14.models.Lection;
+import hw14.models.Repo;
 
 import java.util.Scanner;
 

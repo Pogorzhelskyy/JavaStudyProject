@@ -1,4 +1,4 @@
-package hw13.models;
+package hw13.models.models;
 
 public class Course extends Model {
     private static int counter = 0;

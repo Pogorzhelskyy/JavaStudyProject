@@ -1,9 +1,9 @@
-package hw13.models;
+package hw14.models;
 
-public class Model {
+public abstract class Model {
     private int id;
     private String name;
-    private static int counter = 0;
+   // private static int counter = 0;
 
     public int getId() {
         return id;
@@ -21,11 +21,4 @@ public class Model {
         this.name = name;
     }
 
-    public static int getCounter() {
-        return counter;
-    }
-
-    public static void setCounter(int counter) {
-        Model.counter = counter;
-    }
 }

@@ -1,4 +1,4 @@
-package hw13.models;
+package hw14.models;
 
 import hw13.servises.PersonServ;
 
@@ -8,6 +8,7 @@ public class Lection extends Model {
     private int courseId;
     private String description;
     private int personId;
+    private HomeWork [] homeWork = new HomeWork[10];
 
     public Lection(int id, int courseId) {
         setId(id);
@@ -61,11 +62,34 @@ public class Lection extends Model {
         this.description = description;
     }
 
+    public HomeWork[] getHomeWork() {
+        return homeWork;
+    }
+
+    public void addHomeWork (HomeWork homeWork){
+        int j = 0;
+        for (HomeWork i: this.homeWork) {
+            if (i == null) {
+                this.homeWork[j] = homeWork;
+                return;
+            }
+            j++;
+        }
+    }
+    public void printHomeWork(){
+        for (HomeWork i: this.homeWork) {
+            if (i != null) {
+                System.out.println(i.getTask());
+            }
+            //System.out.println(i);
+        }
+    }
+
     @Override
     public String toString() {
 
-        return "Lection ID " + getId() + "  Course ID " + getCourseId() +
+        return "Lection ID " + getId() + "  Course ID " + getCourseId() /*+
                 "  Person " + PersonServ.getPersonRepo().getById(getPersonId()).getId() +
-                " " + PersonServ.getPersonRepo().getById(getPersonId()).getRole();
+                " " + PersonServ.getPersonRepo().getById(getPersonId()).getRole()*/;
     }
 }

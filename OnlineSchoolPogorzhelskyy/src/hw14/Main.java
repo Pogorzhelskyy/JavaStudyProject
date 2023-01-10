@@ -1,9 +1,11 @@
-package hw13;
+package hw14;
 
-import hw13.models.models.*;
-import hw13.servises.CouseServ;
-import hw13.servises.LectionServ;
-import hw13.servises.PersonServ;
+import hw14.models.HomeWork;
+import hw14.models.Lection;
+import hw14.models.Repo;
+import hw14.servises.CouseServ;
+import hw14.servises.LectionServ;
+import hw14.servises.PersonServ;
 
 import java.util.Scanner;
 
@@ -11,10 +13,17 @@ public class Main {
     public static void main(String[] args) {
         char selector = ' ';
         Scanner scanner = new Scanner(System.in);
+        Repo homeWorkRepo = new Repo<>(new HomeWork[5]);
         CouseServ.initialCreate();
         PersonServ.initialCreate(0);
         LectionServ.initialCreate(0);
-        PersonServ.addName(PersonServ.getPersonRepo().getById(0));
+
+        HomeWork homeWork = new HomeWork(0, "Do something useful");  //new homework
+        homeWork.setLectionId(1);
+        homeWorkRepo.add(homeWork);  //add homework to general repo
+        LectionServ.getLectionRepo().getById(1).addHomeWork(homeWork); //add homework to lection 1
+
+      /*  PersonServ.addName(PersonServ.getPersonRepo().getById(0));
         PersonServ.addLastname(PersonServ.getPersonRepo().getById(0));
         PersonServ.addEmail(PersonServ.getPersonRepo().getById(0));
         PersonServ.addPhone(PersonServ.getPersonRepo().getById(0));
@@ -22,10 +31,12 @@ public class Main {
                 PersonServ.getPersonRepo().getById(0).getName() + " " +
                 PersonServ.getPersonRepo().getById(0).getLastname() + " " +
                 PersonServ.getPersonRepo().getById(0).getPhone() + " " +
-                PersonServ.getPersonRepo().getById(0).getEmail());
+                PersonServ.getPersonRepo().getById(0).getEmail());*/
 
         System.out.println("New Online School");
         System.out.println(LectionServ.getLectionRepo().getById(1));
+        System.out.println("Homeworks for lectio ID 1 are:");
+        LectionServ.getLectionRepo().getById(1).printHomeWork();
         LectionServ.getLectionRepo().list();
 
         do {
@@ -47,13 +58,6 @@ public class Main {
                     int courseId = scanner.nextInt();
                     LectionServ.create(courseId);
                     System.out.println("Total created " + Lection.getCounter() + " lection(s)");
-                    if (Lection.getCounter() >= 8) {
-                        System.out.println("Program terminated because of 8 lections created");
-                        System.exit(0);
-                        // module have no sense, for study only
-                        // will be deleted
-                        // this reason no replaced to create method
-                    }
                     break;
                 case 's':
                     break;

@@ -1,4 +1,4 @@
-package hw13.models;
+package hw13.models.models;
 
 
 import java.util.Arrays;
