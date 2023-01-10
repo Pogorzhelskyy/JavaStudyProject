@@ -1,4 +1,4 @@
-package hw13.models;
+package hw14.models;
 
 public class Person extends Model {
     private static int counter = 0;

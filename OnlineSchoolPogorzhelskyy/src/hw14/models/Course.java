@@ -1,12 +1,12 @@
-package hw13.models;
+package hw14.models;
 
-public class Teacher extends Model {
-
+public class Course extends Model {
     private static int counter = 0;
 
-    public Teacher (int id) {
+    public Course(int id) {
         setId(id);
-        counter ++;
+        counter++;
+        ;
     }
 
     public static int getCounter() {
@@ -14,11 +14,11 @@ public class Teacher extends Model {
     }
 
     public static void setCounter(int counter) {
-        Teacher.counter = counter;
+        Course.counter = counter;
     }
 
     @Override
     public String toString() {
-        return "Teacher ID " + getId();
+        return "ID " + getId();
     }
 }
